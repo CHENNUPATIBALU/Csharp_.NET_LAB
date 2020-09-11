@@ -19,12 +19,6 @@ namespace StudentData
     {
         String UID, studentName, email;
         int semester;
-        bool isAlphaNumeric(char ch)
-        {
-            if (ch >= 0 && ch <= 9 && ch >=65 && ch<=90)
-                return true;
-            return false;
-        }
         public void ReadData()
         {
             IsNotAlphanumericException iae = new IsNotAlphanumericException();

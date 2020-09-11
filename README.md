@@ -5,4 +5,4 @@
 
 ### Output of Drawing Application Project using Inheritance
 
-![DrawingApplication](https://github.com/CHENNUPATIBALU/CSharp-.NET-Lab/blob/master/DrawingApplication/DrawingApplicationOutput.png)
+![DrawingApplication](https://github.com/CHENNUPATIBALU/Csharp_.NET_LAB/blob/master/Drawing_Application/DrawingApplicationOutput.png)

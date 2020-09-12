@@ -15,24 +15,45 @@ namespace StudentData
     {}
     class MaxSemException : Exception
     {}
+
     class Student
     {
         String UID, studentName, email;
         int semester;
-        public void ReadData()
+
+        public static void checkUID(String suid)
         {
             IsNotAlphanumericException iae = new IsNotAlphanumericException();
-            AtException ae = new AtException();
-            MaxSemException mse = new MaxSemException();
+            if (!(suid.Any(char.IsDigit)))
+            {
+                throw new IsNotAlphanumericException();
+            }
+        }
+        public static void checkEmail(String emailid)
+        {
+            if (emailid.Contains("@"))
+            { }
+            else
+                throw new AtException();
+        }
 
+        public static void checkSem(int sem)
+        {
+            if(!(sem > 0 && sem <= 8))
+            {
+                throw new MaxSemException();
+            }
+            else if(!(sem.ToString().Any(Char.IsDigit)))
+                throw new FormatException();
+        }
+        public void ReadData(int n)
+        {
+            Console.WriteLine("Enter the details of Student-" + n);
             try
             {
                 Console.WriteLine("Enter Student UID: ");
                 UID = Console.ReadLine();
-                if (!(UID.Any(char.IsDigit)))
-                {
-                    throw iae;
-                }       
+                checkUID(UID);
             }
             catch(IsNotAlphanumericException inae)
             {
@@ -47,29 +68,21 @@ namespace StudentData
             {
                 Console.WriteLine("Enter Student Email: ");
                 email = Console.ReadLine();
-                if(email.Contains("@"))
-                {}
-                else
-                    throw ae;
+                checkEmail(email);
             }
             catch(AtException a)
             {
                 Console.WriteLine("@ symbol is missing in Email, Try Again");
                 Console.WriteLine("Enter Student Email: ");
                 email = Console.ReadLine();
+                checkEmail(email);
             }
 
             try
             { 
                 Console.WriteLine("Enter Semester: ");
                 semester = Convert.ToInt32(Console.ReadLine());
-                if (!(semester > 0 && semester <= 8))
-                {
-                    throw mse;
-                }
-                else if (!(semester.ToString().Any(Char.IsDigit)))
-                    throw new FormatException();
-
+                checkSem(semester);
             }
             catch(MaxSemException me)
             {
@@ -83,10 +96,13 @@ namespace StudentData
                 Console.WriteLine(fe.Message+ ", Try Again");
                 Console.WriteLine("Enter Semester: ");
                 semester = Convert.ToInt32(Console.ReadLine());
+
             }
+            Console.WriteLine();
         }
-        public void DisplayData()
+        public void DisplayData(int n)
         {
+            Console.WriteLine("Details of Student-" + n);
             Console.WriteLine("UID: " + UID + "\n" + "Student Name: "+studentName+"\n"+"Semester: "+semester+"\n"+"Email: "+email+"\n");
         }
     }
@@ -94,9 +110,17 @@ namespace StudentData
     {
         static void Main(string[] args)
         {
-            Student s = new Student();
-            s.ReadData();
-            s.DisplayData();
+            Console.Write("Enter the number of students: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            Student[] s = new Student[n];
+            for(int i=0;i<n;i++)
+            {
+                s[i] = new Student();
+                s[i].ReadData(i + 1);
+            }
+                
+            for (int i = 0; i < n; i++)
+                s[i].DisplayData(i+1);
             Console.ReadLine();
         }
     }

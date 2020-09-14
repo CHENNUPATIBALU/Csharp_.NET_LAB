@@ -9,4 +9,4 @@
 
 ### Output of Birthday_Age_Calculation
 
-![BirthdayAgeCalculation](https://github.com/CHENNUPATIBALU/Csharp_.NET_LAB/blob/master/BirthdayCalculation/Birthday.png)
+![BirthdayAgeCalculation](BirthdayCalculation/Birthday.png)

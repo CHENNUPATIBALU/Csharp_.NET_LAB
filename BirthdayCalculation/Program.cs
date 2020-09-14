@@ -16,13 +16,17 @@ namespace BirthdayCalculation
              int res = DateTime.Compare(bdate, tdate);
             if (res > 0)
             {
-                if ((tdate.Year - bdate.Year) >= 135)
-                    return 2;
-                else if ((tdate.Year - bdate.Year) == 0)
+                if ((tdate.Year - bdate.Year) == 0)
                     return -1;
+                else
+                    return 1;
             }
             else
-                return 1;
+            {
+                if ((tdate.Year - bdate.Year) >= 135)
+                    return 2;
+            }
+                
             return 0;
         }
         public int TodayBirthday(int year, int month, int btdate)
@@ -32,7 +36,7 @@ namespace BirthdayCalculation
             DateTime bdate = new DateTime(year, month, btdate);
             DateTime tdate = DateTime.Today;
             int res = DateTime.Compare(bdate, tdate);
-            if (res == 0 && bmonth.Month == tmonth)
+            if (res < 0 && bmonth.Month == tmonth)
             {
                 return 1;
             }
@@ -59,15 +63,16 @@ namespace BirthdayCalculation
                 int result1 = b.TodayBirthday(year, month, btdate);
 
                 int age = (DateTime.Now.Year - year);
+
                 if (result1 == 1)
                 {
                     Console.WriteLine("** Oola, Today is your BirthDay **");
                 }
-                else if (result == 2)
+                if (result == 2)
                 {
                     Console.WriteLine("** Your Age is Impossible **");
                 }
-                else if (result == -1)
+                if (result == -1)
                     Console.WriteLine("** You are not Yet Born!! **");
                 Console.WriteLine("** Your Age is " + age +" **");
                 s.ZodaicSign(year, month, btdate);

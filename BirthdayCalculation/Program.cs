@@ -14,14 +14,16 @@ namespace BirthdayCalculation
              DateTime bdate = new DateTime(year, month, btdate);
              DateTime tdate = DateTime.Today;
              int res = DateTime.Compare(bdate, tdate);
-             if (res > 0)
-             {
+            if (res > 0)
+            {
                 if ((tdate.Year - bdate.Year) >= 135)
                     return 2;
                 else if ((tdate.Year - bdate.Year) == 0)
                     return -1;
-             }
-            return 1;
+            }
+            else
+                return 1;
+            return 0;
         }
         public int TodayBirthday(int year, int month, int btdate)
         {

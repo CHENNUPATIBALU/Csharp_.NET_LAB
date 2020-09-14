@@ -69,6 +69,7 @@ namespace BirthdayCalculation
                     Console.WriteLine("** You are not Yet Born!! **");
                 Console.WriteLine("** Your Age is " + age +" **");
                 s.ZodaicSign(year, month, btdate);
+                Console.WriteLine();
             }
             
             Console.ReadLine();

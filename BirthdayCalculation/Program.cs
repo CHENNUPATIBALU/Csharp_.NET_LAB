@@ -30,7 +30,7 @@ namespace BirthdayCalculation
             DateTime bdate = new DateTime(year, month, btdate);
             DateTime tdate = DateTime.Today;
             int res = DateTime.Compare(bdate, tdate);
-            if (res < 0 && bmonth.Month == tmonth)
+            if (res == 0 && bmonth.Month == tmonth)
             {
                 return 1;
             }

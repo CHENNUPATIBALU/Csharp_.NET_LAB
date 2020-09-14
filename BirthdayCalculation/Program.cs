@@ -31,11 +31,11 @@ namespace BirthdayCalculation
                         return 2;
                 }
             }
-            catch(ArgumentOutOfRangeException ae)
+            catch (ArgumentOutOfRangeException ae)
             {
                 Console.WriteLine(ae.Message);
             }
-                 
+
             return 0;
         }
         public int TodayBirthday(int year, int month, int btdate)
@@ -52,11 +52,11 @@ namespace BirthdayCalculation
                     return 1;
                 }
             }
-            catch(ArgumentOutOfRangeException ae)
+            catch (ArgumentOutOfRangeException ae)
             {
                 Console.WriteLine(ae.Message);
             }
-            
+
             return 0;
         }
     }
@@ -68,7 +68,7 @@ namespace BirthdayCalculation
             MaxMonthException me = new MaxMonthException();
             LessThanZeroException lze = new LessThanZeroException();
             SunSign s = new SunSign();
-            for (; ;)
+            for (; ; )
             {
                 //read Year,Month,Date seperately
                 try
@@ -77,7 +77,7 @@ namespace BirthdayCalculation
                     int year = Convert.ToInt32(Console.ReadLine());
                     Console.Write("Enter the Birth Month: ");
                     int month = Convert.ToInt32(Console.ReadLine());
-                    if(month>12 || month<1)
+                    if (month > 12 || month < 1)
                     {
                         throw me;
                     }
@@ -102,21 +102,21 @@ namespace BirthdayCalculation
                     s.ZodaicSign(year, month, btdate);
                     Console.WriteLine();
                 }
-                catch(FormatException fe)
+                catch (FormatException fe)
                 {
-                    Console.WriteLine(fe.Message);
+                    Console.WriteLine("Input is not in right format");
                 }
-                catch(MaxMonthException mme)
+                catch (MaxMonthException mme)
                 {
                     Console.WriteLine("Month should be in between 1 to 12 i.e., Jan-Dec");
                 }
-                catch(LessThanZeroException ltze)
+                catch (LessThanZeroException ltze)
                 {
-                    Console.WriteLine("Date should not be Zero");
+                    Console.WriteLine("Date should not be less than Zero");
                 }
-  
+
             }
-            
+
             Console.ReadLine();
         }
     }

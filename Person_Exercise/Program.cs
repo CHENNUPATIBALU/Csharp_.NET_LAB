@@ -97,6 +97,7 @@ namespace Person_Exercise
             int month = Convert.ToInt32(Console.ReadLine());
             Console.Write("Enter the Birth Date: ");
             int bdate = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine();
 
             DateTime dob = new DateTime(year,month,bdate);
 

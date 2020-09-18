@@ -74,12 +74,12 @@ namespace Person_Exercise
         }
     }
 
-        interface IPayable
-        {
-            double RetrieveDueAmount();
-            void AddToDueAmount(int dueAmount);
-            void PaymentAddress(String address);
-        }
+    interface IPayable
+    {
+        double RetrieveDueAmount();
+        void AddToDueAmount(int dueAmount);
+        void PaymentAddress(String address);
+    }
 
         class Employee : Person, IPayable
         {

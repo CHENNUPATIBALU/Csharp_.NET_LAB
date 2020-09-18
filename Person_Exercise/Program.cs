@@ -13,7 +13,8 @@ namespace Person_Exercise
         private String emailID;
         private DateTime dob;
 
-
+        public Person()
+        { }
         public Person(String fName, String lName, String email, DateTime d)
         {
             this.dob = d;
@@ -25,7 +26,7 @@ namespace Person_Exercise
         {
             this.firstName = fName;
             this.lastName = lName;
-            this.emailID = email;    
+            this.emailID = email;
         }
         public Person(String fName, String lName, DateTime d)
         {
@@ -51,7 +52,7 @@ namespace Person_Exercise
         {
             get
             {
-                return new SunSign().ZodaicSign(dob.Year,dob.Month,dob.Day);
+                return new SunSign().ZodaicSign(dob.Year, dob.Month, dob.Day);
             }
         }
         public bool Birthday
@@ -71,13 +72,50 @@ namespace Person_Exercise
                 return lastName + dob.Month.ToString() + SunSign;
             }
         }
+    }
 
+        interface IPayable
+        {
+            double RetrieveDueAmount();
+            void AddToDueAmount(int dueAmount);
+            void PaymentAddress(String address);
+        }
 
-}
+        class Employee : Person, IPayable
+        {
+            private double salary;
+            private String mailing_address;
+            private double dueAmount;
+
+            public Employee()
+            {
+                dueAmount = 0.0;
+            }
+            public double Salary { get { return (salary - dueAmount); } set => salary = value; }
+            public string Mailing_address { get => mailing_address; set => mailing_address = value; }
+
+            public void AddToDueAmount(int dueAmount)
+            {
+                this.dueAmount += dueAmount;
+            }
+
+            public void PaymentAddress(string address)
+            {
+                this.mailing_address = address;
+            }
+
+            public double RetrieveDueAmount()
+            {
+                return dueAmount;
+            }
+        }
+
     public class Program
     {
         static void Main(string[] args)
         {
+
+            Console.WriteLine("** PERSON **");
             Console.Write("Enter First Name: ");
             String fname = Console.ReadLine();
             Console.Write("Enter Last Name: ");
@@ -118,7 +156,15 @@ namespace Person_Exercise
             Console.WriteLine("Today Birthday: " + p3.Birthday);
             Console.WriteLine("Alloted Screen: " + p3.ScreenName);
 
-            Console.ReadLine();
+            Console.WriteLine("** EMPLOYEE **");
+            
+            Console.WriteLine();
+
+            Console.Write("Enter the Salary: ");
+            double salary = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Enter Mailing Address: ");
+            String mailingaddress = Console.ReadLine();
+            Employee e = new Employee();
         }
     }
 }

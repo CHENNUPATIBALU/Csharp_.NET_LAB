@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BirthdayCalculation", "Birt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Person_Exercise", "Person_Exercise\Person_Exercise.csproj", "{F150FAD7-AD14-4AED-8329-1022EE9C4C74}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormsProject", "..\..\FormsDemo\FormsDemo\FormsProject.csproj", "{867CAFF0-975A-4E99-9D26-EBF0C2112214}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{F150FAD7-AD14-4AED-8329-1022EE9C4C74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F150FAD7-AD14-4AED-8329-1022EE9C4C74}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F150FAD7-AD14-4AED-8329-1022EE9C4C74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{867CAFF0-975A-4E99-9D26-EBF0C2112214}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{867CAFF0-975A-4E99-9D26-EBF0C2112214}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{867CAFF0-975A-4E99-9D26-EBF0C2112214}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{867CAFF0-975A-4E99-9D26-EBF0C2112214}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

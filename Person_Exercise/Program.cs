@@ -91,6 +91,17 @@ namespace Person_Exercise
             {
                 dueAmount = 0.0;
             }
+
+            public Employee(String fName, String lName, String email,double salary,double dueAmount,String mAddress)
+            {
+                base.FirstName = fName;
+                base.LastName = lName;
+                base.EmailID = email;
+                this.salary = salary;
+                this.dueAmount = dueAmount;
+                this.mailing_address = mAddress;
+            }
+
             public double Salary { get { return (salary - dueAmount); } set => salary = value; }
             public string Mailing_address { get => mailing_address; set => mailing_address = value; }
 
@@ -115,7 +126,7 @@ namespace Person_Exercise
         static void Main(string[] args)
         {
 
-            Console.WriteLine("** PERSON **");
+           // Console.WriteLine("** PERSON **");
             Console.Write("Enter First Name: ");
             String fname = Console.ReadLine();
             Console.Write("Enter Last Name: ");
@@ -128,7 +139,7 @@ namespace Person_Exercise
                 Console.WriteLine("Please Enter Valid Email");
             }
             Console.WriteLine();
-            Console.WriteLine("** Date Of Birth **");
+            /*Console.WriteLine("** Date Of Birth **");
             Console.Write("Enter the Birth Year: ");
             int year = Convert.ToInt32(Console.ReadLine());
             Console.Write("Enter the Birth Month: ");
@@ -154,7 +165,7 @@ namespace Person_Exercise
             Console.WriteLine("Person is adult: " + p3.Adult);
             Console.WriteLine("SunSign: " + p3.SunSign);
             Console.WriteLine("Today Birthday: " + p3.Birthday);
-            Console.WriteLine("Alloted Screen: " + p3.ScreenName);
+            Console.WriteLine("Alloted Screen: " + p3.ScreenName);*/
 
             Console.WriteLine("** EMPLOYEE **");
             
@@ -164,7 +175,14 @@ namespace Person_Exercise
             double salary = Convert.ToDouble(Console.ReadLine());
             Console.Write("Enter Mailing Address: ");
             String mailingaddress = Console.ReadLine();
-            Employee e = new Employee();
+            int due = 2000;
+            Employee e = new Employee(fname,lname,email,salary,due,mailingaddress);
+            
+            e.AddToDueAmount(due);
+            double x = e.RetrieveDueAmount();
+            Console.WriteLine(x);
+            Console.WriteLine("Salary: "+e.Salary);
+            Console.ReadLine();
         }
     }
 }

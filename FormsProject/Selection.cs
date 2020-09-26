@@ -143,11 +143,36 @@ namespace FormsDemo
             }
             else if(bca_RadioButton.Checked)
             {
+                try
+                {
+                    if (bca_comboBox.SelectedItem.Equals("Programming Languages"))
+                        return bca_comboBox.Text;
+                    else if (bca_comboBox.SelectedItem.Equals("Database Management"))
+                        return bca_comboBox.Text;
+                    else if (bca_comboBox.SelectedItem.Equals("Computer Graphics"))
+                        return bca_comboBox.Text;
+                    else if (bca_comboBox.SelectedItem.Equals("Animation"))
+                        return bca_comboBox.Text;
+                    else if (bca_comboBox.SelectedItem.Equals("Accounting Application"))
+                        return bca_comboBox.Text;
+                    else if (bca_comboBox.SelectedItem.Equals("System Analysis"))
+                        return bca_comboBox.Text;
+                    else if (bca_comboBox.SelectedItem.Equals("Word Processing"))
+                        return bca_comboBox.Text;
+                    else if (bca_comboBox.SelectedItem.Equals("Internet Technologies"))
+                        return bca_comboBox.Text;
+                    else if (bca_comboBox.SelectedItem.Equals("Personal Information Management"))
+                        return bca_comboBox.Text;
+                    else if (bca_comboBox.SelectedItem.Equals("Music and Video Processing"))
+                        return bca_comboBox.Text;
+                    else
+                        return "No Branch is Selected";
+                }
+                catch(NullReferenceException nre) { }
                 
             }
             return null;
         }
-
         private void groupBox2_Enter(object sender, EventArgs e)
         {
 
@@ -196,7 +221,7 @@ namespace FormsDemo
 
         private void bca_RadioButton_CheckedChanged(object sender, EventArgs e)
         {
-            if(bca_RadioButton.Checked)
+            if (bca_RadioButton.Checked)
             {
                 Btech_label.Visible = false;
                 MBALabel.Visible = false;
@@ -207,6 +232,8 @@ namespace FormsDemo
                 bca_comboBox.Visible = true;
                 lawComboBox.Visible = false;
             }
+            else
+                bca_comboBox.Visible = false;
         }
     }
 }

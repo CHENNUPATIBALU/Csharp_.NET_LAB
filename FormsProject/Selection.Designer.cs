@@ -234,6 +234,17 @@
             this.bca_comboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bca_comboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.bca_comboBox.FormattingEnabled = true;
+            this.bca_comboBox.Items.AddRange(new object[] {
+            "Programming Languages",
+            "Database Management",
+            "Computer Graphics",
+            "Animation",
+            "Accounting Application",
+            "System Analysis",
+            "Word Processing",
+            "Internet Technologies",
+            "Personal Information Management",
+            "Music and Video Processing"});
             this.bca_comboBox.Location = new System.Drawing.Point(639, 58);
             this.bca_comboBox.Name = "bca_comboBox";
             this.bca_comboBox.Size = new System.Drawing.Size(152, 23);

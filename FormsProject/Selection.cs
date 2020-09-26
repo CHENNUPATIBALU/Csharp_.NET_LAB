@@ -31,12 +31,17 @@ namespace FormsDemo
         {
             if (bTech_RadioButton.Checked)
             {
-                groupBox2.Visible = true;
-                groupBox3.Visible = false;
-                groupBox4.Visible = false;
+                Btech_label.Visible = true;
+                MBALabel.Visible = false;
+                BCAlabel.Visible = false;
+                LawLabel.Visible = false;
+                bTech_comboBox.Visible = true;
+                mba_comboBox.Visible = false;
+                bca_comboBox.Visible = false;
+                lawComboBox.Visible = false;
             }
             else
-                groupBox2.Visible = false;
+                bTech_comboBox.Visible = false;
         }
 
         private void submit_button_Click(object sender, EventArgs e)
@@ -49,83 +54,98 @@ namespace FormsDemo
         {
             if (bTech_RadioButton.Checked)
             {
-                if (cse_radioButton.Checked)
-                    return "Computer Science";
-                else if (mec_radioButton.Checked)
-                    return "Mechanical";
-                else if (electrical_radioButton.Checked)
-                    return "Electrical";
-                else if (electronics_radioButton.Checked)
-                    return "Electronics";
-                else if (ise_radioButton.Checked)
-                    return "Information Science";
-                else if (civil_radioButton.Checked)
-                    return "Civil";
-                else if (pet_radioButton.Checked)
-                    return "Petroleum";
-                else
-                    return "No Branch is Selected";
+                try
+                {
+                    if (bTech_comboBox.SelectedItem.Equals("Computer Science and Engineering"))
+                        return bTech_comboBox.Text;
+                    else if (bTech_comboBox.SelectedItem.Equals("Information Science and Engineering"))
+                        return bTech_comboBox.Text;
+                    else if (bTech_comboBox.SelectedItem.Equals("Mechanical Engineering"))
+                        return bTech_comboBox.Text;
+                    else if (bTech_comboBox.SelectedItem.Equals("Electrical Engineering"))
+                        return bTech_comboBox.Text;
+                    else if (bTech_comboBox.SelectedItem.Equals("Electronics Engineering"))
+                        return bTech_comboBox.Text;
+                    else if (bTech_comboBox.SelectedItem.Equals("Civil Engineering"))
+                        return bTech_comboBox.Text;
+                    else if (bTech_comboBox.SelectedItem.Equals("Petroleum Engineering"))
+                        return bTech_comboBox.Text;
+                    else
+                        return "No Branch is selected";
+                }
+                catch(NullReferenceException ne)
+                { }
+                
             }
             else if(law_RadioButton.Checked)
             {
-                if (civilLaw_radioButton.Checked)
-                    return "Civil Law";
-                else if (criminalLaw_RadioButton.Checked)
-                    return "Criminal Law";
-                else if (corporateLaw_radioButton.Checked)
-                    return "Corporate Law";
-                else if (internationalLaw_radioButton.Checked)
-                    return "International Law";
-                else if (labourLaw_RadioButton.Checked)
-                    return "Labour Law";
-                else if (realEstateLaw_radioButton.Checked)
-                    return "RealEstate Law";
-                else if (patentLaw_radioButton.Checked)
-                    return "Patent Law";
-                else if (mediaLaw_radioButton.Checked)
-                    return "Media Law";
-                else if (competitionLaw_radioButton.Checked)
-                    return "Competition Law";
-                else if (intellectualPropertyLaw_radioButton.Checked)
-                    return "Intellectual Property Law";
-                else if (mergersAquisitionLaw_radioButton.Checked)
-                    return "Mergers and Aquisition Law";
-                else
-                    return "Branch Not Selected";
+                try
+                {
+                    if (lawComboBox.SelectedItem.Equals("Civil Law"))
+                        return lawComboBox.Text;
+                    else if (lawComboBox.SelectedItem.Equals("Tax Law"))
+                        return lawComboBox.Text;
+                    else if (lawComboBox.SelectedItem.Equals("Criminal Law"))
+                        return lawComboBox.Text;
+                    else if (lawComboBox.SelectedItem.Equals("Corporate Law"))
+                        return lawComboBox.Text;
+                    else if (lawComboBox.SelectedItem.Equals("International Law"))
+                        return lawComboBox.Text;
+                    else if (lawComboBox.SelectedItem.Equals("Labour Law"))
+                        return lawComboBox.Text;
+                    else if (lawComboBox.SelectedItem.Equals("Real Estate Law"))
+                        return lawComboBox.Text;
+                    else if (lawComboBox.SelectedItem.Equals("Patent Law"))
+                        return lawComboBox.Text;
+                    else if (lawComboBox.SelectedItem.Equals("Media Law"))
+                        return lawComboBox.Text;
+                    else if (lawComboBox.SelectedItem.Equals("Competition Law"))
+                        return lawComboBox.Text;
+                    else if (lawComboBox.SelectedItem.Equals("Intellectual Property Law"))
+                        return lawComboBox.Text;
+                    else if (lawComboBox.SelectedItem.Equals("Mergers and Aquisition Law"))
+                        return lawComboBox.Text;
+                    else
+                        return "No Branch is Selected";
+                }
+                catch (NullReferenceException nr) { }
             }
             else if(mba_RadioButton.Checked)
             {
-                if (finance_radioButton.Checked)
-                    return "MBA in Finanace";
-                else if (humanResourceManagement_radioButton.Checked)
-                    return "MBA in Human Resource Management";
-                else if (informationTechnology_radioButton.Checked)
-                    return "MBA in Information Technology";
-                else if (logisticsManagement_radioButton.Checked)
-                    return "MBA in Logistics Management";
-                else if (marketingManagement_radioButton.Checked)
-                    return "MBA in Marketing Management";
-                else if (businessManagement_radioButton.Checked)
-                    return "MBA in Business Management";
-                else if (ruralManagement_radioButton.Checked)
-                    return "MBA in Rural Management";
-                else if (healthCareManagement_radioButton.Checked)
-                    return "MBA in Health Care Management";
-                else if (operationsManagement_radioButton.Checked)
-                    return "MBA in Operations Management";
-                else if (eventManagement_radioButton.Checked)
-                    return "MBA in Event Management";
-                else if (businessManagement_radioButton.Checked)
-                    return "MBA in Business Analytics";
-                else
-                    return "Branch not Selected";
+                try
+                {
+                    if (mba_comboBox.SelectedItem.Equals("MBA in Finance"))
+                        return mba_comboBox.Text;
+                    else if (mba_comboBox.SelectedItem.Equals("MBA in Human Resource Management"))
+                        return mba_comboBox.Text;
+                    else if (mba_comboBox.SelectedItem.Equals("MBA in Information Technology(IT)"))
+                        return mba_comboBox.Text;
+                    else if (mba_comboBox.SelectedItem.Equals("MBA in Logistics Management"))
+                        return mba_comboBox.Text;
+                    else if (mba_comboBox.SelectedItem.Equals("MBA in Marketing Management"))
+                        return mba_comboBox.Text;
+                    else if (mba_comboBox.SelectedItem.Equals("MBA in Business Management"))
+                        return mba_comboBox.Text;
+                    else if (mba_comboBox.SelectedItem.Equals("MBA in Rural Management"))
+                        return mba_comboBox.Text;
+                    else if (mba_comboBox.SelectedItem.Equals("MBA in Health Care Management"))
+                        return mba_comboBox.Text;
+                    else if (mba_comboBox.SelectedItem.Equals("MBA in Operations Management"))
+                        return mba_comboBox.Text;
+                    else if (mba_comboBox.SelectedItem.Equals("MBA in Event Management"))
+                        return mba_comboBox.Text;
+                    else if (mba_comboBox.SelectedItem.Equals("MBA in Business Analytics"))
+                        return mba_comboBox.Text;
+                    else
+                        return "No Branch is Selected";
+                }
+                catch (NullReferenceException ne) { }
             }
-            /*else if(bca_RadioButton.Checked)
+            else if(bca_RadioButton.Checked)
             {
-
-            }*/
-            else
-                return null;
+                
+            }
+            return null;
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)
@@ -137,13 +157,18 @@ namespace FormsDemo
         {
             if(law_RadioButton.Checked)
             {
-                groupBox2.Visible = false;
-                groupBox3.Visible = true;
-                groupBox4.Visible = false;
+                Btech_label.Visible = false;
+                MBALabel.Visible = false;
+                BCAlabel.Visible = false;
+                bTech_comboBox.Visible = false;
+                mba_comboBox.Visible = false;
+                bca_comboBox.Visible = false;
+                LawLabel.Visible = true;
+                lawComboBox.Visible = true;
             }
             else
             {
-                groupBox3.Visible = false;
+                lawComboBox.Visible = false;
             }
         }
 
@@ -151,12 +176,37 @@ namespace FormsDemo
         {
             if (mba_RadioButton.Checked)
             {
-                groupBox2.Visible = false;
-                groupBox3.Visible = false;
-                groupBox4.Visible = true;
+                Btech_label.Visible = false;
+                MBALabel.Visible = true;
+                BCAlabel.Visible = false;
+                LawLabel.Visible = false;
+                bTech_comboBox.Visible = false;
+                mba_comboBox.Visible = true;
+                bca_comboBox.Visible = false;
+                lawComboBox.Visible = false;
             }
             else
-                groupBox4.Visible = false;
+                mba_comboBox.Visible = false;
+        }
+
+        private void bTech_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void bca_RadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if(bca_RadioButton.Checked)
+            {
+                Btech_label.Visible = false;
+                MBALabel.Visible = false;
+                BCAlabel.Visible = true;
+                LawLabel.Visible = false;
+                bTech_comboBox.Visible = false;
+                mba_comboBox.Visible = false;
+                bca_comboBox.Visible = true;
+                lawComboBox.Visible = false;
+            }
         }
     }
 }

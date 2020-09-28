@@ -12,6 +12,7 @@ namespace PictureViewer
 {
     public partial class Form1 : Form
     {
+        Type type;
         public Form1()
         {
             InitializeComponent();
@@ -30,6 +31,7 @@ namespace PictureViewer
 
         private void showPicture_Button_Click(object sender, EventArgs e)
         {
+
             // Shows the Open file dialog window, if user selects
             // an image file load that to file dialog box 
             if(openFileDialog1.ShowDialog() == DialogResult.OK)
@@ -84,6 +86,7 @@ namespace PictureViewer
 
         private void previous_button_Click(object sender, EventArgs e)
         {
+            String typeOfFile = type.Name;
             
         }
 
@@ -94,8 +97,12 @@ namespace PictureViewer
 
         private void Zoom_trackBar_Scroll(object sender, EventArgs e)
         {
-            if(Zoom_trackBar.Value > 1)
-                pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

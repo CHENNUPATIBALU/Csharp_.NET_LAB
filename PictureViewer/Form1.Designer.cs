@@ -33,16 +33,19 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.ShowPicture_Button = new System.Windows.Forms.Button();
             this.Clear_Button = new System.Windows.Forms.Button();
-            this.Close_button = new System.Windows.Forms.Button();
-            this.Stretch_checkBox = new System.Windows.Forms.CheckBox();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.SetBg_button = new System.Windows.Forms.Button();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.Close_button = new System.Windows.Forms.Button();
             this.next_button = new System.Windows.Forms.Button();
             this.previous_button = new System.Windows.Forms.Button();
+            this.Stretch_checkBox = new System.Windows.Forms.CheckBox();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.Zoom_trackBar = new System.Windows.Forms.TrackBar();
+            this.Zoom_label = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Zoom_trackBar)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -81,6 +84,8 @@
             this.flowLayoutPanel1.Controls.Add(this.Close_button);
             this.flowLayoutPanel1.Controls.Add(this.next_button);
             this.flowLayoutPanel1.Controls.Add(this.previous_button);
+            this.flowLayoutPanel1.Controls.Add(this.Zoom_trackBar);
+            this.flowLayoutPanel1.Controls.Add(this.Zoom_label);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(209, 523);
@@ -110,6 +115,16 @@
             this.Clear_Button.UseVisualStyleBackColor = true;
             this.Clear_Button.Click += new System.EventHandler(this.clear_Button_Click);
             // 
+            // SetBg_button
+            // 
+            this.SetBg_button.Location = new System.Drawing.Point(673, 3);
+            this.SetBg_button.Name = "SetBg_button";
+            this.SetBg_button.Size = new System.Drawing.Size(187, 40);
+            this.SetBg_button.TabIndex = 4;
+            this.SetBg_button.Text = "Set the Background";
+            this.SetBg_button.UseVisualStyleBackColor = true;
+            this.SetBg_button.Click += new System.EventHandler(this.setBg_button_Click);
+            // 
             // Close_button
             // 
             this.Close_button.AutoSize = true;
@@ -120,6 +135,26 @@
             this.Close_button.Text = "Close";
             this.Close_button.UseVisualStyleBackColor = true;
             this.Close_button.Click += new System.EventHandler(this.close_button_Click);
+            // 
+            // next_button
+            // 
+            this.next_button.Location = new System.Drawing.Point(399, 3);
+            this.next_button.Name = "next_button";
+            this.next_button.Size = new System.Drawing.Size(156, 40);
+            this.next_button.TabIndex = 5;
+            this.next_button.Text = "Next";
+            this.next_button.UseVisualStyleBackColor = true;
+            this.next_button.Click += new System.EventHandler(this.next_button_Click);
+            // 
+            // previous_button
+            // 
+            this.previous_button.Location = new System.Drawing.Point(216, 3);
+            this.previous_button.Name = "previous_button";
+            this.previous_button.Size = new System.Drawing.Size(177, 40);
+            this.previous_button.TabIndex = 6;
+            this.previous_button.Text = "Previous";
+            this.previous_button.UseVisualStyleBackColor = true;
+            this.previous_button.Click += new System.EventHandler(this.previous_button_Click);
             // 
             // Stretch_checkBox
             // 
@@ -132,16 +167,6 @@
             this.Stretch_checkBox.UseVisualStyleBackColor = true;
             this.Stretch_checkBox.CheckedChanged += new System.EventHandler(this.stretch_checkBox_CheckedChanged);
             // 
-            // SetBg_button
-            // 
-            this.SetBg_button.Location = new System.Drawing.Point(673, 3);
-            this.SetBg_button.Name = "SetBg_button";
-            this.SetBg_button.Size = new System.Drawing.Size(187, 40);
-            this.SetBg_button.TabIndex = 4;
-            this.SetBg_button.Text = "Set the Background";
-            this.SetBg_button.UseVisualStyleBackColor = true;
-            this.SetBg_button.Click += new System.EventHandler(this.setBg_button_Click);
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
@@ -150,23 +175,22 @@
             this.openFileDialog1.Title = "Select a Picture";
             this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
-            // next_button
+            // Zoom_trackBar
             // 
-            this.next_button.Location = new System.Drawing.Point(425, 3);
-            this.next_button.Name = "next_button";
-            this.next_button.Size = new System.Drawing.Size(130, 40);
-            this.next_button.TabIndex = 5;
-            this.next_button.Text = "Next";
-            this.next_button.UseVisualStyleBackColor = true;
+            this.Zoom_trackBar.Location = new System.Drawing.Point(70, 3);
+            this.Zoom_trackBar.Name = "Zoom_trackBar";
+            this.Zoom_trackBar.Size = new System.Drawing.Size(140, 56);
+            this.Zoom_trackBar.TabIndex = 7;
+            this.Zoom_trackBar.Scroll += new System.EventHandler(this.Zoom_trackBar_Scroll);
             // 
-            // previous_button
+            // Zoom_label
             // 
-            this.previous_button.Location = new System.Drawing.Point(242, 3);
-            this.previous_button.Name = "previous_button";
-            this.previous_button.Size = new System.Drawing.Size(177, 40);
-            this.previous_button.TabIndex = 6;
-            this.previous_button.Text = "Previous";
-            this.previous_button.UseVisualStyleBackColor = true;
+            this.Zoom_label.AutoSize = true;
+            this.Zoom_label.Location = new System.Drawing.Point(20, 0);
+            this.Zoom_label.Name = "Zoom_label";
+            this.Zoom_label.Size = new System.Drawing.Size(44, 17);
+            this.Zoom_label.TabIndex = 8;
+            this.Zoom_label.Text = "Zoom";
             // 
             // Form1
             // 
@@ -181,6 +205,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Zoom_trackBar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -199,6 +224,8 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button next_button;
         private System.Windows.Forms.Button previous_button;
+        private System.Windows.Forms.TrackBar Zoom_trackBar;
+        private System.Windows.Forms.Label Zoom_label;
     }
 }
 

@@ -38,7 +38,7 @@ namespace PictureViewer
             }
             else
             {
-
+                MessageBox.Show("Image not Selected", "Notice",MessageBoxButtons.OK,MessageBoxIcon.Question);
             }
         }
 
@@ -80,6 +80,22 @@ namespace PictureViewer
                 // set the image to normal mode
                 pictureBox1.SizeMode = PictureBoxSizeMode.Normal;
             }
+        }
+
+        private void previous_button_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void next_button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Zoom_trackBar_Scroll(object sender, EventArgs e)
+        {
+            if(Zoom_trackBar.Value > 1)
+                pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
         }
     }
 }

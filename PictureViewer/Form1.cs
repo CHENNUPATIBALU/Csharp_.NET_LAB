@@ -94,8 +94,19 @@ namespace PictureViewer
 
         private void previous_button_Click(object sender, EventArgs e)
         {
-            
-            
+            FileInfo fInfo = new FileInfo(path);
+            DirectoryInfo dInfo = fInfo.Directory;
+            FileInfo[] lFiles = dInfo.GetFiles("*.jpg");
+            if (i < lFiles.Length)
+            {
+                pictureBox1.Load(lFiles[i--].FullName);
+            }
+            else
+            {
+                i = 0;
+                pictureBox1.Load(lFiles[i--].FullName);
+            }
+
         }
 
         private void next_button_Click(object sender, EventArgs e)

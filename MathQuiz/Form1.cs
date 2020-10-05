@@ -30,6 +30,10 @@ namespace MathQuiz
         {
             InitializeComponent();
             progressBar1.Visible = false;
+            tickLabel.Visible = false;
+            tickLabel1.Visible = false;
+            ticklabel2.Visible = false;
+            tickLabel3.Visible = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -128,7 +132,43 @@ namespace MathQuiz
                 MessageBox.Show("You have answered right..","✔",MessageBoxButtons.OK,MessageBoxIcon.None);
                 startQuizButton.Enabled = true;
             }
-            else if(timeLeft>0)
+            if (CheckDivision())
+            {
+                tickLabel3.Text = "✔";
+                tickLabel3.Visible = true;
+            }
+            else
+            {
+                tickLabel3.Text = "✖";
+                tickLabel3.Visible = true;
+            }
+                
+
+            if (CheckMultiplication())
+            {
+                ticklabel2.Text = "✔";
+                ticklabel2.Visible = true;
+            }
+            else
+                ticklabel2.Text = "✖";ticklabel2.Visible = true;
+
+            if (CheckSubtraction())
+            {
+                tickLabel1.Text = "✔";
+                tickLabel1.Visible = true;
+            }
+            else
+                tickLabel1.Text = "✖";tickLabel1.Visible = true;
+
+            if (CheckAddition())
+            {
+                tickLabel.Text = "✔";
+                tickLabel.Visible = true;
+            }
+            else
+                tickLabel.Text = "✖";tickLabel.Visible = true;
+
+            if(timeLeft>0)
             {
                 simpleSound.Play();
                 progressBar1.Value = progressBar1.Value - 1;
@@ -197,6 +237,26 @@ namespace MathQuiz
         }
 
         private void progressBar1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void tickLabel_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void tickLabel1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void ticklabel2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void tickLabel3_Click(object sender, EventArgs e)
         {
             
         }

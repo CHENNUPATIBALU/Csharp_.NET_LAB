@@ -55,6 +55,10 @@
             this.startQuizButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.tickLabel = new System.Windows.Forms.Label();
+            this.tickLabel1 = new System.Windows.Forms.Label();
+            this.ticklabel2 = new System.Windows.Forms.Label();
+            this.tickLabel3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.sum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.subtraction)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.multiplication)).BeginInit();
@@ -338,11 +342,51 @@
             this.progressBar1.TabIndex = 21;
             this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
             // 
+            // tickLabel
+            // 
+            this.tickLabel.AutoSize = true;
+            this.tickLabel.Location = new System.Drawing.Point(670, 108);
+            this.tickLabel.Name = "tickLabel";
+            this.tickLabel.Size = new System.Drawing.Size(0, 17);
+            this.tickLabel.TabIndex = 22;
+            this.tickLabel.Click += new System.EventHandler(this.tickLabel_Click);
+            // 
+            // tickLabel1
+            // 
+            this.tickLabel1.AutoSize = true;
+            this.tickLabel1.Location = new System.Drawing.Point(670, 187);
+            this.tickLabel1.Name = "tickLabel1";
+            this.tickLabel1.Size = new System.Drawing.Size(0, 17);
+            this.tickLabel1.TabIndex = 23;
+            this.tickLabel1.Click += new System.EventHandler(this.tickLabel1_Click);
+            // 
+            // ticklabel2
+            // 
+            this.ticklabel2.AutoSize = true;
+            this.ticklabel2.Location = new System.Drawing.Point(670, 265);
+            this.ticklabel2.Name = "ticklabel2";
+            this.ticklabel2.Size = new System.Drawing.Size(0, 17);
+            this.ticklabel2.TabIndex = 24;
+            this.ticklabel2.Click += new System.EventHandler(this.ticklabel2_Click);
+            // 
+            // tickLabel3
+            // 
+            this.tickLabel3.AutoSize = true;
+            this.tickLabel3.Location = new System.Drawing.Point(673, 347);
+            this.tickLabel3.Name = "tickLabel3";
+            this.tickLabel3.Size = new System.Drawing.Size(0, 17);
+            this.tickLabel3.TabIndex = 25;
+            this.tickLabel3.Click += new System.EventHandler(this.tickLabel3_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(795, 452);
+            this.Controls.Add(this.tickLabel3);
+            this.Controls.Add(this.ticklabel2);
+            this.Controls.Add(this.tickLabel1);
+            this.Controls.Add(this.tickLabel);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.startQuizButton);
             this.Controls.Add(this.division);
@@ -409,6 +453,10 @@
         private System.Windows.Forms.Button startQuizButton;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Label tickLabel;
+        private System.Windows.Forms.Label tickLabel1;
+        private System.Windows.Forms.Label ticklabel2;
+        private System.Windows.Forms.Label tickLabel3;
     }
 }
 

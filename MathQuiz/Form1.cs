@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace MathQuiz
 {
@@ -21,6 +22,9 @@ namespace MathQuiz
         int divlabel1, divlabel2;
 
         int timeLeft;
+
+        SoundPlayer simpleSound = new SoundPlayer(MathQuiz.Properties.Resources.BeepSound);
+        SoundPlayer simpleSound1 = new SoundPlayer(MathQuiz.Properties.Resources.SuccessSound);
 
         public Form1()
         {
@@ -94,15 +98,17 @@ namespace MathQuiz
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            
             if(CheckAddition() && CheckSubtraction() && CheckMultiplication() && CheckDivision())
             {
                 timer1.Stop();
+                simpleSound1.Play();
                 MessageBox.Show("You have answered right..","✔",MessageBoxButtons.OK,MessageBoxIcon.None);
-
                 startQuizButton.Enabled = true;
             }
             else if(timeLeft>0)
             {
+                simpleSound.Play();
                 timeLeft = timeLeft - 1;
                 timeLabel.Text = timeLeft.ToString()+" seconds";
             }
@@ -140,10 +146,10 @@ namespace MathQuiz
         }
         private void subtraction_Enter_1(object sender, EventArgs e)
         {
-            NumericUpDown answer = sender as NumericUpDown;
-            if (answer != null)
+            NumericUpDown answer1 = sender as NumericUpDown;
+            if (answer1 != null)
             {
-                answer.Select(0, answer.Value.ToString().Length);
+                answer1.Select(0, answer1.Value.ToString().Length);
             }
         }
 

@@ -125,62 +125,81 @@ namespace Person_Exercise
     {
         static void Main(string[] args)
         {
+            String fname, lname, email;
+            int year,month,bdate;
 
-           // Console.WriteLine("** PERSON **");
-            Console.Write("Enter First Name: ");
-            String fname = Console.ReadLine();
-            Console.Write("Enter Last Name: ");
-            String lname = Console.ReadLine();
-            Console.Write("Enter Email: ");
-            String email = Console.ReadLine();
-            if (email.Contains("@")) { }
-            else
+            for(; ;)
             {
-                Console.WriteLine("Please Enter Valid Email");
+                Console.WriteLine("Choose an Option: ");
+                Console.WriteLine("1: Person\n2: Employee\n3: Exit\n");
+                int choice = Convert.ToInt32(Console.ReadLine());
+
+                switch (choice)
+                {
+                    case 1:
+                        Console.WriteLine("** PERSON **");
+                        Console.Write("Enter First Name: ");
+                        fname = Console.ReadLine();
+                        Console.Write("Enter Last Name: ");
+                        lname = Console.ReadLine();
+                        Console.Write("Enter Email: ");
+                        email = Console.ReadLine();
+                        if (email.Contains("@")) { }
+                        else
+                        {
+                            Console.WriteLine("Please Enter Valid Email");
+                            break;
+                        }
+                        Console.WriteLine();
+                        Console.WriteLine("** Date Of Birth **");
+                        Console.Write("Enter the Birth Year: ");
+                        year = Convert.ToInt32(Console.ReadLine());
+                        Console.Write("Enter the Birth Month: ");
+                        month = Convert.ToInt32(Console.ReadLine());
+                        Console.Write("Enter the Birth Date: ");
+                        bdate = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine();
+
+                        DateTime dob = new DateTime(year, month, bdate);
+
+                        Person p1 = new Person(fname, lname, email, dob);
+                        Console.WriteLine("Person is adult: " + p1.Adult);
+                        Console.WriteLine("SunSign: " + p1.SunSign);
+                        Console.WriteLine("Today Birthday: " + p1.Birthday);
+                        Console.WriteLine("Alloted Screen: " + p1.ScreenName);
+                        Console.WriteLine();
+                        break;
+                    case 2:
+                        Console.WriteLine("** EMPLOYEE **");
+
+                        Console.WriteLine();
+                        Console.Write("Enter First Name: ");
+                        fname = Console.ReadLine();
+                        Console.Write("Enter Last Name: ");
+                        lname = Console.ReadLine();
+                        Console.Write("Enter Email: ");
+                        email = Console.ReadLine();
+                        if (email.Contains("@")) { }
+                        else
+                        {
+                            Console.WriteLine("Please Enter Valid Email");
+                            break;
+                        }
+                        Console.WriteLine();
+
+                        Console.Write("Enter the Salary: ");
+                        double salary = Convert.ToDouble(Console.ReadLine());
+                        Console.Write("Enter Mailing Address: ");
+                        String mailingaddress = Console.ReadLine();
+                        Employee e = new Employee(fname, lname, email, salary, 200, mailingaddress);
+
+                        double x = e.RetrieveDueAmount();
+                        Console.WriteLine("Due Amount: " + x);
+                        Console.WriteLine("Salary: " + e.Salary);
+                        break;
+                    case 3: Environment.Exit(0);break;
+                }
             }
-            Console.WriteLine();
-            /*Console.WriteLine("** Date Of Birth **");
-            Console.Write("Enter the Birth Year: ");
-            int year = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Enter the Birth Month: ");
-            int month = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Enter the Birth Date: ");
-            int bdate = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine();
-
-            DateTime dob = new DateTime(year,month,bdate);
-
-            Person p1 = new Person(fname,lname,email,dob);
-            Console.WriteLine("Person is adult: "+p1.Adult);
-            Console.WriteLine("SunSign: "+p1.SunSign);
-            Console.WriteLine("Today Birthday: "+p1.Birthday);
-            Console.WriteLine("Alloted Screen: "+p1.ScreenName);
-            Console.WriteLine();
-            Person p2 = new Person(fname, lname, email);
-            Console.WriteLine("Person is adult: " + p2.Adult);
-            Console.WriteLine("Today Birthday: " + p2.Birthday);
-            Console.WriteLine("Alloted Screen: " + p2.ScreenName);
-            Console.WriteLine();
-            Person p3 = new Person(fname, lname,  dob);
-            Console.WriteLine("Person is adult: " + p3.Adult);
-            Console.WriteLine("SunSign: " + p3.SunSign);
-            Console.WriteLine("Today Birthday: " + p3.Birthday);
-            Console.WriteLine("Alloted Screen: " + p3.ScreenName);*/
-
-            Console.WriteLine("** EMPLOYEE **");
-            
-            Console.WriteLine();
-
-            Console.Write("Enter the Salary: ");
-            double salary = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Enter Mailing Address: ");
-            String mailingaddress = Console.ReadLine();
-            Employee e = new Employee(fname,lname,email,salary,200,mailingaddress);
-            
-            double x = e.RetrieveDueAmount();
-            Console.WriteLine("Due Amount: "+x);
-            Console.WriteLine("Salary: "+e.Salary);
-            Console.ReadLine();
         }
     }
 }

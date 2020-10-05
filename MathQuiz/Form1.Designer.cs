@@ -142,14 +142,20 @@
             // 
             this.subtraction.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.subtraction.Location = new System.Drawing.Point(488, 169);
+            this.subtraction.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
             this.subtraction.Minimum = new decimal(new int[] {
-            100,
+            500,
             0,
             0,
             -2147483648});
             this.subtraction.Name = "subtraction";
             this.subtraction.Size = new System.Drawing.Size(167, 41);
             this.subtraction.TabIndex = 3;
+            this.subtraction.Enter += new System.EventHandler(this.subtraction_Enter_1);
             // 
             // label3
             // 
@@ -195,9 +201,15 @@
             // 
             this.multiplication.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.multiplication.Location = new System.Drawing.Point(488, 247);
+            this.multiplication.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
             this.multiplication.Name = "multiplication";
             this.multiplication.Size = new System.Drawing.Size(167, 41);
             this.multiplication.TabIndex = 4;
+            this.multiplication.Enter += new System.EventHandler(this.multiplication_Enter_1);
             // 
             // label8
             // 
@@ -244,6 +256,11 @@
             this.division.DecimalPlaces = 3;
             this.division.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.division.Location = new System.Drawing.Point(488, 329);
+            this.division.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
             this.division.Minimum = new decimal(new int[] {
             100,
             0,
@@ -252,6 +269,7 @@
             this.division.Name = "division";
             this.division.Size = new System.Drawing.Size(167, 41);
             this.division.TabIndex = 5;
+            this.division.Enter += new System.EventHandler(this.division_Enter_1);
             // 
             // label12
             // 
@@ -307,7 +325,7 @@
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 10000;
+            this.timer1.Interval = 30000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1

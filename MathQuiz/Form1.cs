@@ -94,22 +94,17 @@ namespace MathQuiz
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if((CheckAddition() && CheckSubtraction() && CheckMultiplication() && CheckDivision()))
+            if(CheckAddition() && CheckSubtraction() && CheckMultiplication() && CheckDivision())
             {
                 timer1.Stop();
-                MessageBox.Show("You have answered right..");
-                startQuizButton.Enabled = true;
-            }
-            else if (!(CheckAddition() && CheckSubtraction() && CheckMultiplication() && CheckDivision()))
-            {
-                timer1.Stop();
-                MessageBox.Show("You have answered Wrong..");
+                MessageBox.Show("You have answered right..","✔",MessageBoxButtons.OK,MessageBoxIcon.None);
+
                 startQuizButton.Enabled = true;
             }
             else if(timeLeft>0)
             {
-                timeLeft =timeLeft - 1;
-                timeLabel.Text = timeLeft.ToString();
+                timeLeft = timeLeft - 1;
+                timeLabel.Text = timeLeft.ToString()+" seconds";
             }
             else
             {
@@ -143,6 +138,32 @@ namespace MathQuiz
                 answer.Select(0, answer.Value.ToString().Length);
             }
         }
+        private void subtraction_Enter_1(object sender, EventArgs e)
+        {
+            NumericUpDown answer = sender as NumericUpDown;
+            if (answer != null)
+            {
+                answer.Select(0, answer.Value.ToString().Length);
+            }
+        }
+
+        private void multiplication_Enter_1(object sender, EventArgs e)
+        {
+            NumericUpDown answer = sender as NumericUpDown;
+            if (answer != null)
+            {
+                answer.Select(0, answer.Value.ToString().Length);
+            }
+        }
+
+        private void division_Enter_1(object sender, EventArgs e)
+        {
+            NumericUpDown answer = sender as NumericUpDown;
+            if (answer != null)
+            {
+                answer.Select(0, answer.Value.ToString().Length);
+            }
+        }
 
         public bool CheckAddition()
         {
@@ -165,8 +186,14 @@ namespace MathQuiz
         }
         public bool CheckDivision()
         {
-            if ((divlabel1 / divlabel2 == division.Value))
-                return true;
+            try
+            {
+                if ((divlabel1 / divlabel2 == division.Value))
+                    return true;
+            }
+            catch(DivideByZeroException de1)
+            { }
+            
             return false;
         }
     }

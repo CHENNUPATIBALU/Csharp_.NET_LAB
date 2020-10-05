@@ -105,9 +105,9 @@ namespace Person_Exercise
             public double Salary { get { return (salary - dueAmount); } set => salary = value; }
             public string Mailing_address { get => mailing_address; set => mailing_address = value; }
 
-            public void AddToDueAmount(int dueAmount)
+            public void AddToDueAmount(int dueAmount1)
             {
-                this.dueAmount += dueAmount;
+                this.dueAmount += dueAmount1;
             }
 
             public void PaymentAddress(string address)
@@ -175,12 +175,10 @@ namespace Person_Exercise
             double salary = Convert.ToDouble(Console.ReadLine());
             Console.Write("Enter Mailing Address: ");
             String mailingaddress = Console.ReadLine();
-            int due = 2000;
-            Employee e = new Employee(fname,lname,email,salary,due,mailingaddress);
+            Employee e = new Employee(fname,lname,email,salary,200,mailingaddress);
             
-            e.AddToDueAmount(due);
             double x = e.RetrieveDueAmount();
-            Console.WriteLine(x);
+            Console.WriteLine("Due Amount: "+x);
             Console.WriteLine("Salary: "+e.Salary);
             Console.ReadLine();
         }

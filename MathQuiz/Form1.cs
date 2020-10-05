@@ -196,7 +196,6 @@ namespace MathQuiz
                 {
                     division.Value = 0;
                 }
-                
                 startQuizButton.Enabled = true;
             }
         }

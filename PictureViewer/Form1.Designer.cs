@@ -62,7 +62,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1377, 578);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1355, 560);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // pictureBox1
@@ -72,7 +72,7 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1371, 514);
+            this.pictureBox1.Size = new System.Drawing.Size(1349, 498);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -88,16 +88,16 @@
             this.flowLayoutPanel1.Controls.Add(this.Zoom_label);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(209, 523);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(206, 507);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1165, 52);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1146, 50);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // ShowPicture_Button
             // 
             this.ShowPicture_Button.AutoSize = true;
             this.ShowPicture_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ShowPicture_Button.Location = new System.Drawing.Point(1028, 3);
+            this.ShowPicture_Button.Location = new System.Drawing.Point(1009, 3);
             this.ShowPicture_Button.Name = "ShowPicture_Button";
             this.ShowPicture_Button.Size = new System.Drawing.Size(134, 40);
             this.ShowPicture_Button.TabIndex = 0;
@@ -109,7 +109,7 @@
             // 
             this.Clear_Button.AutoSize = true;
             this.Clear_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Clear_Button.Location = new System.Drawing.Point(866, 3);
+            this.Clear_Button.Location = new System.Drawing.Point(847, 3);
             this.Clear_Button.Name = "Clear_Button";
             this.Clear_Button.Size = new System.Drawing.Size(156, 40);
             this.Clear_Button.TabIndex = 1;
@@ -120,7 +120,7 @@
             // SetBg_button
             // 
             this.SetBg_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SetBg_button.Location = new System.Drawing.Point(673, 3);
+            this.SetBg_button.Location = new System.Drawing.Point(654, 3);
             this.SetBg_button.Name = "SetBg_button";
             this.SetBg_button.Size = new System.Drawing.Size(187, 40);
             this.SetBg_button.TabIndex = 4;
@@ -132,7 +132,7 @@
             // 
             this.Close_button.AutoSize = true;
             this.Close_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Close_button.Location = new System.Drawing.Point(561, 3);
+            this.Close_button.Location = new System.Drawing.Point(542, 3);
             this.Close_button.Name = "Close_button";
             this.Close_button.Size = new System.Drawing.Size(106, 40);
             this.Close_button.TabIndex = 3;
@@ -143,7 +143,7 @@
             // next_button
             // 
             this.next_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.next_button.Location = new System.Drawing.Point(399, 3);
+            this.next_button.Location = new System.Drawing.Point(380, 3);
             this.next_button.Name = "next_button";
             this.next_button.Size = new System.Drawing.Size(156, 40);
             this.next_button.TabIndex = 5;
@@ -154,7 +154,7 @@
             // previous_button
             // 
             this.previous_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.previous_button.Location = new System.Drawing.Point(216, 3);
+            this.previous_button.Location = new System.Drawing.Point(197, 3);
             this.previous_button.Name = "previous_button";
             this.previous_button.Size = new System.Drawing.Size(177, 40);
             this.previous_button.TabIndex = 6;
@@ -167,7 +167,7 @@
             this.Zoom_trackBar.BackColor = System.Drawing.Color.Tan;
             this.Zoom_trackBar.Location = new System.Drawing.Point(60, 3);
             this.Zoom_trackBar.Name = "Zoom_trackBar";
-            this.Zoom_trackBar.Size = new System.Drawing.Size(150, 56);
+            this.Zoom_trackBar.Size = new System.Drawing.Size(131, 56);
             this.Zoom_trackBar.TabIndex = 7;
             this.Zoom_trackBar.TickStyle = System.Windows.Forms.TickStyle.Both;
             this.Zoom_trackBar.Scroll += new System.EventHandler(this.Zoom_trackBar_Scroll);
@@ -187,11 +187,11 @@
             // 
             this.Stretch_checkBox.AutoSize = true;
             this.Stretch_checkBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Stretch_checkBox.Location = new System.Drawing.Point(3, 523);
+            this.Stretch_checkBox.Location = new System.Drawing.Point(3, 507);
             this.Stretch_checkBox.Name = "Stretch_checkBox";
             this.Stretch_checkBox.Padding = new System.Windows.Forms.Padding(0, 0, 70, 20);
             this.Stretch_checkBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Stretch_checkBox.Size = new System.Drawing.Size(185, 52);
+            this.Stretch_checkBox.Size = new System.Drawing.Size(185, 50);
             this.Stretch_checkBox.TabIndex = 1;
             this.Stretch_checkBox.Text = "Stretch";
             this.Stretch_checkBox.UseVisualStyleBackColor = true;
@@ -209,7 +209,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1377, 578);
+            this.ClientSize = new System.Drawing.Size(1355, 560);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Form1";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;

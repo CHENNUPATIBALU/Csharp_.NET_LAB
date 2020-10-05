@@ -86,6 +86,7 @@ namespace MathQuiz
             division.Value = 0;
             subtraction.Value = 0;
 
+            // Undo to original Colors
             sum.BackColor = Color.Empty;
             multiplication.BackColor = Color.Empty;
             division.BackColor = Color.Empty;
@@ -110,7 +111,6 @@ namespace MathQuiz
 
                 // plays sound
                 simpleSound1.Play();
-
 
                 // Sets color of NumericUpDown color to Green
                 sum.BackColor = Color.LightGreen;

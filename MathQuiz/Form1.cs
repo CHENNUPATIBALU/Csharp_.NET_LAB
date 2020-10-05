@@ -86,6 +86,11 @@ namespace MathQuiz
             division.Value = 0;
             subtraction.Value = 0;
 
+            sum.BackColor = Color.Empty;
+            multiplication.BackColor = Color.Empty;
+            division.BackColor = Color.Empty;
+            subtraction.BackColor = Color.Empty;
+
             timeLeft = 30;
             timeLabel.Text = "30 seconds";
             timer1.Start();
@@ -102,7 +107,18 @@ namespace MathQuiz
             if(CheckAddition() && CheckSubtraction() && CheckMultiplication() && CheckDivision())
             {
                 timer1.Stop();
+
+                // plays sound
                 simpleSound1.Play();
+
+
+                // Sets color of NumericUpDown color to Green
+                sum.BackColor = Color.LightGreen;
+                subtraction.BackColor = Color.LightGreen;
+                multiplication.BackColor = Color.LightGreen;
+                division.BackColor = Color.LightGreen;
+
+                // Shows this Message
                 MessageBox.Show("You have answered right..","✔",MessageBoxButtons.OK,MessageBoxIcon.None);
                 startQuizButton.Enabled = true;
             }
@@ -125,7 +141,8 @@ namespace MathQuiz
                 multiplication.Value = mullabel1 * mullabel2;
                 try
                 {
-                    division.Value = divlabel1 / divlabel2;
+                    float res = divlabel1 / divlabel2;
+                    division.Value = Int32.Parse(res.ToString());
                 }
                 catch(DivideByZeroException de)
                 {
@@ -192,9 +209,10 @@ namespace MathQuiz
         }
         public bool CheckDivision()
         {
+            float divresult = float.Parse(division.Value.ToString());
             try
             {
-                if ((divlabel1 / divlabel2 == division.Value))
+                if ((divlabel1 / divlabel2 == divresult))
                     return true;
             }
             catch(DivideByZeroException de1)

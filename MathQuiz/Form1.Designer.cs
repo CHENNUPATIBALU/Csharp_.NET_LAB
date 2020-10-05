@@ -66,7 +66,7 @@
             this.timeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timeLabel.Location = new System.Drawing.Point(519, 11);
             this.timeLabel.Name = "timeLabel";
-            this.timeLabel.Size = new System.Drawing.Size(200, 30);
+            this.timeLabel.Size = new System.Drawing.Size(200, 37);
             this.timeLabel.TabIndex = 0;
             // 
             // label1
@@ -254,7 +254,7 @@
             // 
             // division
             // 
-            this.division.DecimalPlaces = 3;
+            this.division.DecimalPlaces = 2;
             this.division.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.division.Location = new System.Drawing.Point(488, 329);
             this.division.Maximum = new decimal(new int[] {

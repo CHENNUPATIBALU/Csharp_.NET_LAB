@@ -54,6 +54,7 @@
             this.divLeftLabel = new System.Windows.Forms.Label();
             this.startQuizButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.sum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.subtraction)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.multiplication)).BeginInit();
@@ -328,11 +329,21 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(519, 51);
+            this.progressBar1.Maximum = 30;
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(200, 12);
+            this.progressBar1.TabIndex = 21;
+            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(795, 452);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.startQuizButton);
             this.Controls.Add(this.division);
             this.Controls.Add(this.label12);
@@ -397,6 +408,7 @@
         private System.Windows.Forms.Label divLeftLabel;
         private System.Windows.Forms.Button startQuizButton;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
 

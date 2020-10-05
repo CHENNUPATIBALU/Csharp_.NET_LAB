@@ -29,6 +29,7 @@ namespace MathQuiz
         public Form1()
         {
             InitializeComponent();
+            progressBar1.Visible = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -39,6 +40,7 @@ namespace MathQuiz
         private void startQuizButton_Click(object sender, EventArgs e)
         {
             StartTheQuiz();
+            progressBar1.Visible = true;
             startQuizButton.Enabled = false;
         }
 
@@ -93,6 +95,7 @@ namespace MathQuiz
             subtraction.BackColor = Color.Empty;
 
             timeLeft = 30;
+            progressBar1.Value = 30;
             timeLabel.Text = "30 seconds";
             timer1.Start();
         }
@@ -104,7 +107,10 @@ namespace MathQuiz
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            
+            if (timeLeft<=5)
+            {
+                timeLabel.BackColor = Color.Red;
+            }
             if(CheckAddition() && CheckSubtraction() && CheckMultiplication() && CheckDivision())
             {
                 timer1.Stop();
@@ -125,6 +131,7 @@ namespace MathQuiz
             else if(timeLeft>0)
             {
                 simpleSound.Play();
+                progressBar1.Value = progressBar1.Value - 1;
                 timeLeft = timeLeft - 1;
                 timeLabel.Text = timeLeft.ToString()+" seconds";
             }
@@ -132,6 +139,7 @@ namespace MathQuiz
             {
                 // Stopping the timer
                 timer1.Stop();
+                timeLabel.BackColor = Color.White;
                 timeLabel.Text = "Time's up!";
                 MessageBox.Show("You didn''t finish in time.", "Sorry");
 
@@ -186,6 +194,11 @@ namespace MathQuiz
             {
                 answer.Select(0, answer.Value.ToString().Length);
             }
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+            
         }
 
         public bool CheckAddition()

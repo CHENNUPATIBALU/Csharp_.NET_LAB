@@ -103,12 +103,6 @@ namespace MathQuiz
             timeLabel.Text = "30 seconds";
             timer1.Start();
         }
-
-        private void sum_ValueChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (timeLeft<=5)
@@ -207,57 +201,6 @@ namespace MathQuiz
             {
                 answer.Select(0, answer.Value.ToString().Length);
             }
-        }
-        private void subtraction_Enter_1(object sender, EventArgs e)
-        {
-            NumericUpDown answer1 = sender as NumericUpDown;
-            if (answer1 != null)
-            {
-                answer1.Select(0, answer1.Value.ToString().Length);
-            }
-        }
-
-        private void multiplication_Enter_1(object sender, EventArgs e)
-        {
-            NumericUpDown answer = sender as NumericUpDown;
-            if (answer != null)
-            {
-                answer.Select(0, answer.Value.ToString().Length);
-            }
-        }
-
-        private void division_Enter_1(object sender, EventArgs e)
-        {
-            NumericUpDown answer = sender as NumericUpDown;
-            if (answer != null)
-            {
-                answer.Select(0, answer.Value.ToString().Length);
-            }
-        }
-
-        private void progressBar1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void tickLabel_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void tickLabel1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void ticklabel2_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void tickLabel3_Click(object sender, EventArgs e)
-        {
-            
         }
 
         public bool CheckAddition()

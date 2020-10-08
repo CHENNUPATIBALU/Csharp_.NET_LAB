@@ -141,7 +141,6 @@
             this.sum.Name = "sum";
             this.sum.Size = new System.Drawing.Size(167, 41);
             this.sum.TabIndex = 2;
-            this.sum.ValueChanged += new System.EventHandler(this.sum_ValueChanged);
             this.sum.Enter += new System.EventHandler(this.sum_Enter);
             // 
             // subtraction
@@ -161,7 +160,7 @@
             this.subtraction.Name = "subtraction";
             this.subtraction.Size = new System.Drawing.Size(167, 41);
             this.subtraction.TabIndex = 3;
-            this.subtraction.Enter += new System.EventHandler(this.subtraction_Enter_1);
+            this.subtraction.Enter += new System.EventHandler(this.sum_Enter);
             // 
             // label3
             // 
@@ -215,7 +214,7 @@
             this.multiplication.Name = "multiplication";
             this.multiplication.Size = new System.Drawing.Size(167, 41);
             this.multiplication.TabIndex = 4;
-            this.multiplication.Enter += new System.EventHandler(this.multiplication_Enter_1);
+            this.multiplication.Enter += new System.EventHandler(this.sum_Enter);
             // 
             // label8
             // 
@@ -275,7 +274,7 @@
             this.division.Name = "division";
             this.division.Size = new System.Drawing.Size(167, 41);
             this.division.TabIndex = 5;
-            this.division.Enter += new System.EventHandler(this.division_Enter_1);
+            this.division.Enter += new System.EventHandler(this.sum_Enter);
             // 
             // label12
             // 
@@ -340,7 +339,6 @@
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(200, 12);
             this.progressBar1.TabIndex = 21;
-            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
             // 
             // tickLabel
             // 
@@ -349,7 +347,6 @@
             this.tickLabel.Name = "tickLabel";
             this.tickLabel.Size = new System.Drawing.Size(0, 17);
             this.tickLabel.TabIndex = 22;
-            this.tickLabel.Click += new System.EventHandler(this.tickLabel_Click);
             // 
             // tickLabel1
             // 
@@ -358,7 +355,6 @@
             this.tickLabel1.Name = "tickLabel1";
             this.tickLabel1.Size = new System.Drawing.Size(0, 17);
             this.tickLabel1.TabIndex = 23;
-            this.tickLabel1.Click += new System.EventHandler(this.tickLabel1_Click);
             // 
             // ticklabel2
             // 
@@ -367,7 +363,6 @@
             this.ticklabel2.Name = "ticklabel2";
             this.ticklabel2.Size = new System.Drawing.Size(0, 17);
             this.ticklabel2.TabIndex = 24;
-            this.ticklabel2.Click += new System.EventHandler(this.ticklabel2_Click);
             // 
             // tickLabel3
             // 
@@ -376,7 +371,6 @@
             this.tickLabel3.Name = "tickLabel3";
             this.tickLabel3.Size = new System.Drawing.Size(0, 17);
             this.tickLabel3.TabIndex = 25;
-            this.tickLabel3.Click += new System.EventHandler(this.tickLabel3_Click);
             // 
             // Form1
             // 

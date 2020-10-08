@@ -99,11 +99,11 @@ namespace MathQuiz
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (timeLeft<=5)
+            if (timeLeft<=10)
             {
                 timeLabel.BackColor = Color.Red;
             }
-            if(CheckAddition() && CheckSubtraction() && CheckMultiplication() && CheckDivision())
+            else if(CheckAddition() && CheckSubtraction() && CheckMultiplication() && CheckDivision())
             {
                 timer1.Stop();
 
@@ -130,7 +130,7 @@ namespace MathQuiz
                 tickLabel3.Text = "✖";
                 tickLabel3.Visible = true;
             }
-                
+
 
             if (CheckMultiplication())
             {
@@ -138,7 +138,10 @@ namespace MathQuiz
                 ticklabel2.Visible = true;
             }
             else
-                ticklabel2.Text = "✖";ticklabel2.Visible = true;
+            {
+                ticklabel2.Text = "✖"; ticklabel2.Visible = true; 
+            }
+                
 
             if (CheckSubtraction())
             {
@@ -146,17 +149,24 @@ namespace MathQuiz
                 tickLabel1.Visible = true;
             }
             else
-                tickLabel1.Text = "✖";tickLabel1.Visible = true;
+            {
+                tickLabel1.Text = "✖"; tickLabel1.Visible = true;
+            }
+                
 
             if (CheckAddition())
             {
                 tickLabel.Text = "✔";
+                
                 tickLabel.Visible = true;
             }
             else
-                tickLabel.Text = "✖";tickLabel.Visible = true;
+            {
+                tickLabel.Text = "✖"; tickLabel.Visible = true;
+            }
+                
 
-            if(timeLeft>0)
+            if (timeLeft>0)
             {
                 simpleSound.Play();
                 progressBar1.Value = progressBar1.Value - 1;
@@ -200,20 +210,41 @@ namespace MathQuiz
         public bool CheckAddition()
         {
             if ((addlabel1 + addlabel2 == sum.Value))
+            {
+                sum.BackColor = Color.LightGreen;
                 return true;
+            }
+            else
+            {
+                sum.BackColor = Color.Red;
+            }
             return false;
         }
 
         public bool CheckSubtraction()
         {
             if ((sublabel1 - sublabel2 == subtraction.Value))
+            {
+                subtraction.BackColor = Color.LightGreen;
                 return true;
+            }
+            else
+            {
+                subtraction.BackColor = Color.Red;
+            }
             return false;
         }
         public bool CheckMultiplication()
         {
             if ((mullabel1 * mullabel2 == multiplication.Value))
+            {
+                multiplication.BackColor = Color.LightGreen;
                 return true;
+            }
+            else
+            {
+                multiplication.BackColor = Color.Red;
+            }
             return false;
         }
         public bool CheckDivision()
@@ -222,10 +253,16 @@ namespace MathQuiz
             try
             {
                 if ((divlabel1 / divlabel2 == divresult))
+                {
+                    division.BackColor = Color.LightGreen;
                     return true;
+                }
+                    
             }
             catch(DivideByZeroException de1)
-            { }
+            {
+                division.BackColor = Color.Red;
+            }
             
             return false;
         }

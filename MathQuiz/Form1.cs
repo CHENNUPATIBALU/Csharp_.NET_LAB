@@ -35,12 +35,6 @@ namespace MathQuiz
             ticklabel2.Visible = false;
             tickLabel3.Visible = false;
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void startQuizButton_Click(object sender, EventArgs e)
         {
             StartTheQuiz();

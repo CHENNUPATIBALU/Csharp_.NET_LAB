@@ -410,7 +410,6 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Math Quiz";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.sum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.subtraction)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.multiplication)).EndInit();

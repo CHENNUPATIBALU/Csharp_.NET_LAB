@@ -24,7 +24,13 @@ namespace Matching_Game
         List<string> icons = new List<string>()
         {
             "!", "!", "N", "N", ",", ",", "k", "k",
-            "b", "b", "v", "v", "w", "w", "z", "z"
+            "b", "b", "v", "v", "w", "w", "z", "z",
+            "j", "j", "t", "t", "u", "u", "p", "p",
+            "f", "f", "F", "F", "G", "G", "H", "H",
+            "I", "I", "J", "J", "K", "K", "P", "P",
+            "Q", "Q", "R", "R", "S", "S", "T", "T",
+            "%", "%", "&", "&", "?", "?", "``", "``",
+            "~", "~", "@", "@", "^", "^", "+", "+"
         };
         public Form1()
         {
@@ -145,7 +151,7 @@ namespace Matching_Game
             winner = true;
 
             // Showing a message that the user WON
-            MessageBox.Show("You matched all the Icons"+"\n\n"+"Time taken to match : "+endTime+" seconds", "Congratulations ", MessageBoxButtons.OK);
+            MessageBox.Show("You matched all the Icons"+"\n\n"+"Time taken to match : "+endTime+" seconds", "Congratulations ✌", MessageBoxButtons.OK);
             Close();    // Closes the Form
         }
         

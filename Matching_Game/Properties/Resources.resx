@@ -127,4 +127,10 @@
   <data name="game_win_sound_effect__online_audio_converter_com_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\game-win-sound-effect (online-audio-converter.com).wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="Pellet_Gun_Pump_SoundBible_com_517750307" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pellet Gun Pump-SoundBible.com-517750307.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Tick_Tock_SoundBible_com_1165545065" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tick Tock-SoundBible.com-1165545065.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

@@ -86,5 +86,23 @@ namespace Matching_Game.Properties {
                 return ResourceManager.GetStream("game_win_sound_effect__online_audio_converter_com_", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Pellet_Gun_Pump_SoundBible_com_517750307 {
+            get {
+                return ResourceManager.GetStream("Pellet_Gun_Pump_SoundBible_com_517750307", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Tick_Tock_SoundBible_com_1165545065 {
+            get {
+                return ResourceManager.GetStream("Tick_Tock_SoundBible_com_1165545065", resourceCulture);
+            }
+        }
     }
 }

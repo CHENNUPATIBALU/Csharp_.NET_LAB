@@ -92,5 +92,11 @@
   <ItemGroup>
     <None Include="Resources\Click2-Sebastian-759472264.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pellet Gun Pump-SoundBible.com-517750307.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tick Tock-SoundBible.com-1165545065.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

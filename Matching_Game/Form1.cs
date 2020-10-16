@@ -16,6 +16,8 @@ namespace Matching_Game
         Random rand = new Random();
         Label firstClicked = null;
         Label secondClicked = null;
+        bool winner = false;
+        int endTime = 0;
 
         List<string> icons = new List<string>()
         {
@@ -47,6 +49,7 @@ namespace Matching_Game
         {
             Label clickedLabel = sender as Label;
             SoundPlayer sp1 = new SoundPlayer(Matching_Game.Properties.Resources.Click2_Sebastian_759472264);
+            SoundPlayer sp3 = new SoundPlayer(Matching_Game.Properties.Resources.Pellet_Gun_Pump_SoundBible_com_517750307);
 
             if (clickedLabel != null)
             {
@@ -69,10 +72,12 @@ namespace Matching_Game
                 {
                     firstClicked = null;
                     secondClicked = null;
+                    sp3.Play();
                     return;
                 }
 
                 timer1.Start();
+                timer2.Start();
             }
         }
 
@@ -102,8 +107,19 @@ namespace Matching_Game
             }
             SoundPlayer sp = new SoundPlayer(Matching_Game.Properties.Resources.game_win_sound_effect__online_audio_converter_com_);
             sp.Play();
-            MessageBox.Show("You matched all the Icons", "Congratulations", MessageBoxButtons.OK);
+            winner = true;
+            MessageBox.Show("You matched all the Icons and Time taken is: "+endTime, "Congratulations", MessageBoxButtons.OK);
             Close();
+        }
+
+        private void timeTaken(int totalTimeTaken)
+        {
+            MessageBox.Show("Time Taken to Match Icons: " + totalTimeTaken);
+        }
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            if (timer2.Interval > 0 && !winner)
+                endTime += timer2.Interval / 1000;
         }
     }
 }

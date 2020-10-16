@@ -17,7 +17,7 @@ namespace Matching_Game
         Label firstClicked = null;
         Label secondClicked = null;
         bool winner = false;
-        int endTime = 0;
+        static int endTime = 0;
 
         // List
         // Icons to the labels
@@ -145,7 +145,7 @@ namespace Matching_Game
             winner = true;
 
             // Showing a message that the user WON
-            MessageBox.Show("You matched all the Icons"+"\n\n"+"Time taken to match : "+endTime+" seconds", "Congratulations", MessageBoxButtons.OK);
+            MessageBox.Show("You matched all the Icons"+"\n\n"+"Time taken to match : "+endTime+" seconds", "Congratulations ", MessageBoxButtons.OK);
             Close();    // Closes the Form
         }
         

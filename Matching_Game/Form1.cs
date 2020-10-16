@@ -24,7 +24,7 @@ namespace Matching_Game
         List<string> icons = new List<string>()
         {
             "!", "!", "N", "N", ",", ",", "k", "k",
-        "b", "b", "v", "v", "w", "w", "z", "z"
+            "b", "b", "v", "v", "w", "w", "z", "z"
         };
         public Form1()
         {
@@ -70,11 +70,11 @@ namespace Matching_Game
                 {
                     firstClicked = clickedLabel;
                     sp1.Play();
-                    clickedLabel.ForeColor = Color.Black;
+                    clickedLabel.ForeColor = Color.Black; timer3.Start();
                     return;
                 }
-                secondClicked = clickedLabel;
 
+                secondClicked = clickedLabel;
                 // plays the sound
                 sp1.Play();
                 clickedLabel.ForeColor = Color.Black;
@@ -94,6 +94,7 @@ namespace Matching_Game
                 // Starting of timers
                 timer1.Start();
                 timer2.Start();
+                
             }
         }
 
@@ -111,6 +112,20 @@ namespace Matching_Game
             // Assigning 'null' to the Label references
             firstClicked = null;
             secondClicked = null;
+        }
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            if (timer2.Interval > 0 && !winner)
+                endTime += timer2.Interval / 1000;
+        }
+
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            if (firstClicked != null && secondClicked == null)
+            {
+                firstClicked.ForeColor = firstClicked.BackColor;
+                timer3.Stop();
+            }
         }
 
         private void CheckForWinner()
@@ -130,13 +145,9 @@ namespace Matching_Game
             winner = true;
 
             // Showing a message that the user WON
-            MessageBox.Show("You matched all the Icons and Time taken is: "+endTime+" seconds", "Congratulations", MessageBoxButtons.OK);
+            MessageBox.Show("You matched all the Icons"+"\n\n"+"Time taken to match : "+endTime+" seconds", "Congratulations", MessageBoxButtons.OK);
             Close();    // Closes the Form
         }
-        private void timer2_Tick(object sender, EventArgs e)
-        {
-            if (timer2.Interval > 0 && !winner)
-                endTime += timer2.Interval / 1000;
-        }
+        
     }
 }

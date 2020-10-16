@@ -19,6 +19,8 @@ namespace Matching_Game
         bool winner = false;
         int endTime = 0;
 
+        // List
+        // Icons to the labels
         List<string> icons = new List<string>()
         {
             "!", "!", "N", "N", ",", ",", "k", "k",
@@ -30,16 +32,21 @@ namespace Matching_Game
             AssignIconsToSquares();
         }
 
-        private void AssignIconsToSquares()
+        private void AssignIconsToSquares()        // Assigning the icons to Squares
         {
             foreach(Control control in tableLayoutPanel1.Controls)
             {
                 Label iconLabel = control as Label;
                 if(iconLabel!=null)
                 {
+                    // Generating random numbers to assign labels in the label
                     int randomNumber = rand.Next(icons.Count);
+
+                    // Assigning the icons
                     iconLabel.Text = icons[randomNumber];
                     iconLabel.ForeColor = iconLabel.BackColor;
+
+                    // Remove string icon from the list
                     icons.RemoveAt(randomNumber);
                 }
             }
@@ -48,6 +55,8 @@ namespace Matching_Game
         private void label_click(object sender, EventArgs e)
         {
             Label clickedLabel = sender as Label;
+
+            // Setting the Sound Players
             SoundPlayer sp1 = new SoundPlayer(Matching_Game.Properties.Resources.Click2_Sebastian_759472264);
             SoundPlayer sp3 = new SoundPlayer(Matching_Game.Properties.Resources.Pellet_Gun_Pump_SoundBible_com_517750307);
 
@@ -55,6 +64,8 @@ namespace Matching_Game
             {
                 if (clickedLabel.ForeColor == Color.Black)
                     return;
+
+                // shows the label, if it is null
                 if (firstClicked == null)
                 {
                     firstClicked = clickedLabel;
@@ -63,19 +74,24 @@ namespace Matching_Game
                     return;
                 }
                 secondClicked = clickedLabel;
+
+                // plays the sound
                 sp1.Play();
                 clickedLabel.ForeColor = Color.Black;
 
+                // Checks for the Winner
                 CheckForWinner();
 
                 if(firstClicked.Text == secondClicked.Text)
                 {
+                    // Assigning 'null' to the Label references
                     firstClicked = null;
                     secondClicked = null;
-                    sp3.Play();
+                    sp3.Play();     // plays sound
                     return;
                 }
 
+                // Starting of timers
                 timer1.Start();
                 timer2.Start();
             }
@@ -84,12 +100,15 @@ namespace Matching_Game
         private void timer1_Tick(object sender, EventArgs e)
         {
             SoundPlayer sp2 = new SoundPlayer(Matching_Game.Properties.Resources.Button_Push_Mike_Koenig_1659525069);
-            timer1.Stop();
 
-            sp2.Play();
+            timer1.Stop();  // Stops the timer
+
+            sp2.Play();     // plays sound
+
             firstClicked.ForeColor = firstClicked.BackColor;
             secondClicked.ForeColor = secondClicked.BackColor;
 
+            // Assigning 'null' to the Label references
             firstClicked = null;
             secondClicked = null;
         }
@@ -101,20 +120,18 @@ namespace Matching_Game
                 Label iconLabel = control as Label;
                 if(iconLabel!=null)
                 {
-                    if (iconLabel.ForeColor == iconLabel.BackColor)
+                    if (iconLabel.ForeColor == iconLabel.BackColor)     //Checks whether the fore-color and back-color is same
                         return;
                 }
             }
-            SoundPlayer sp = new SoundPlayer(Matching_Game.Properties.Resources.game_win_sound_effect__online_audio_converter_com_);
-            sp.Play();
-            winner = true;
-            MessageBox.Show("You matched all the Icons and Time taken is: "+endTime, "Congratulations", MessageBoxButtons.OK);
-            Close();
-        }
 
-        private void timeTaken(int totalTimeTaken)
-        {
-            MessageBox.Show("Time Taken to Match Icons: " + totalTimeTaken);
+            SoundPlayer sp = new SoundPlayer(Matching_Game.Properties.Resources.game_win_sound_effect__online_audio_converter_com_);
+            sp.Play();      // Plays a Sound
+            winner = true;
+
+            // Showing a message that the user WON
+            MessageBox.Show("You matched all the Icons and Time taken is: "+endTime+" seconds", "Congratulations", MessageBoxButtons.OK);
+            Close();    // Closes the Form
         }
         private void timer2_Tick(object sender, EventArgs e)
         {

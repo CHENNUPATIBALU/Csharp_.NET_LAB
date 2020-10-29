@@ -153,9 +153,29 @@ namespace TextEditor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap saveAs_image {
+            get {
+                object obj = ResourceManager.GetObject("saveAs_image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap saveToolStripMenuItem_Image {
             get {
                 object obj = ResourceManager.GetObject("saveToolStripMenuItem.Image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap selectAll_image {
+            get {
+                object obj = ResourceManager.GetObject("selectAll_image", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -81,13 +81,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\undo_image.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\redo_image.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\exit_image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveAs_image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\selectAll_image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo_image.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

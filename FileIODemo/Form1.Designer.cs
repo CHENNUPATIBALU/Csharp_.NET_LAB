@@ -77,7 +77,7 @@
             this.Controls.Add(this.openButton);
             this.Controls.Add(this.textBox1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "FileIODemo";
             this.ResumeLayout(false);
             this.PerformLayout();
 

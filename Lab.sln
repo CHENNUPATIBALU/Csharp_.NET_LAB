@@ -29,6 +29,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextEditor", "TextEditor\Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileIODemo1", "FileIODemo1\FileIODemo1.csproj", "{2DDA9AE5-E500-4FA2-AA17-9536F98E8C63}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleDatabaseWalkthrough", "SampleDatabaseWalkthrough\SampleDatabaseWalkthrough.csproj", "{1B1F6EDE-31C0-42CB-A8BA-0FD26BB421C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentDatabaseProject", "StudentDatabaseProject\StudentDatabaseProject.csproj", "{BDDB8DC0-BA3E-4283-B43B-91AA735B01FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +91,14 @@ Global
 		{2DDA9AE5-E500-4FA2-AA17-9536F98E8C63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2DDA9AE5-E500-4FA2-AA17-9536F98E8C63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2DDA9AE5-E500-4FA2-AA17-9536F98E8C63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B1F6EDE-31C0-42CB-A8BA-0FD26BB421C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B1F6EDE-31C0-42CB-A8BA-0FD26BB421C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B1F6EDE-31C0-42CB-A8BA-0FD26BB421C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B1F6EDE-31C0-42CB-A8BA-0FD26BB421C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDDB8DC0-BA3E-4283-B43B-91AA735B01FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDDB8DC0-BA3E-4283-B43B-91AA735B01FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDDB8DC0-BA3E-4283-B43B-91AA735B01FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDDB8DC0-BA3E-4283-B43B-91AA735B01FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

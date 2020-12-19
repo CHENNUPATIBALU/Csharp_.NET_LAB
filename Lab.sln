@@ -33,6 +33,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleDatabaseWalkthrough",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentDatabaseProject", "StudentDatabaseProject\StudentDatabaseProject.csproj", "{BDDB8DC0-BA3E-4283-B43B-91AA735B01FF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadDemo", "ThreadDemo\ThreadDemo.csproj", "{B9746429-55C3-4258-AD54-674DA069E378}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Student Community Library", "Student Community Library\Student Community Library.csproj", "{94AFEE5A-4A93-410E-8B1C-270DF78EF6F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +103,14 @@ Global
 		{BDDB8DC0-BA3E-4283-B43B-91AA735B01FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDDB8DC0-BA3E-4283-B43B-91AA735B01FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDDB8DC0-BA3E-4283-B43B-91AA735B01FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9746429-55C3-4258-AD54-674DA069E378}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9746429-55C3-4258-AD54-674DA069E378}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9746429-55C3-4258-AD54-674DA069E378}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9746429-55C3-4258-AD54-674DA069E378}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94AFEE5A-4A93-410E-8B1C-270DF78EF6F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94AFEE5A-4A93-410E-8B1C-270DF78EF6F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94AFEE5A-4A93-410E-8B1C-270DF78EF6F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94AFEE5A-4A93-410E-8B1C-270DF78EF6F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
